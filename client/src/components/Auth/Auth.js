@@ -91,14 +91,14 @@ const Auth = () => {
                         {isSignup && <Input name="confirmPassword" label="Repeat Password" handleChange={handleChange} type="password"/>}
                     </Grid>
                     
-                    <Button type="submit" fullWidth variant="contained" color="primary" className={classes.submit} onClick={handleSubmit}>
+                    <Button type="submit" fullWidth variant="contained" className={classes.submit} onClick={handleSubmit}>
                         {isSignup?'Sign Up':'Sign In'}
                     </Button>
 
                     <GoogleLogin
                         clientId="823961081666-qgcgjqegckt1jmi2ne4lof6h7stosav7.apps.googleusercontent.com"
                         render={(renderProps)=>(
-                            <Button className={classes.googleButton} color="primary" fullWidth onClick={renderProps.onClick} startIcon={<Icon/>} variant="contained">Google Sign In</Button>
+                            <Button className={classes.googleButton} fullWidth onClick={renderProps.onClick} startIcon={<Icon/>} variant="contained">Google Sign In</Button>
                         )}
                         onSuccess={googleSuccess}
                         onFailure={googleFailure}

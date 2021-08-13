@@ -15,14 +15,18 @@ export default makeStyles((theme) => ({
     },
   },
   heading: {
-    color: theme.palette.primary.main,
+    color: '#7C77B9',
     textDecoration: 'none',
     fontSize: '2em',
     fontWeight: 300,
+    fontFamily: "'Pacifico', cursive",
   },
+  // FFFC31
+  // F71735
   image: {
     marginLeft: '10px',
     marginTop: '5px',
+    
   },
   toolbar: {
     display: 'flex',
@@ -59,4 +63,9 @@ export default makeStyles((theme) => ({
     color: theme.palette.getContrastText(deepPurple[500]),
     backgroundColor: deepPurple[500],
   },
+  Button:{
+    background: '#f2545b',
+    color:'#fff',
+    borderRadius:'40px'
+  }
 }));

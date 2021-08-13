@@ -1,6 +1,7 @@
 import React,{useState,useEffect} from 'react'
 import { Container, AppBar, Typography, Grow, Grid, Avatar,Toolbar,Button } from '@material-ui/core';
 import memories from '../../images/memories.png';
+import logo from '../../images/logo.svg'
 import {Link,useHistory,useLocation} from 'react-router-dom'
 import {useDispatch} from 'react-redux'
 import decode from 'jwt-decode'
@@ -34,10 +35,10 @@ const Navbar = () => {
     return (
 
         
-        <AppBar className={classes.appBar} position="static" color="inherit">
-            <div className="brandContainer">
-                <Typography component={Link} to="/" className={classes.heading} variant="h2" align="center">Memories</Typography>
-                <img className={classes.image} src={memories} alt="icon" height="60" />
+        <div className={classes.appBar} position="static" color="inherit">
+            <div className={classes.brandContainer}>
+                <Typography component={Link} to="/" className={classes.heading} variant="h2" align="center">myMemories</Typography>
+                <img className={classes.image} src={logo} alt="icon" height="60" />
             </div>
             <Toolbar className={classes.toolbar}>
                 {
@@ -45,14 +46,14 @@ const Navbar = () => {
                         <div className={classes.profile}>
                             <Avatar alt={user.result.name} src={user.result.imageUrl}/>
                             <Typography>{user.result.name}</Typography>
-                            <Button variant="contained" onClick={logout}>Log Out</Button>
+                            <Button variant="contained" onClick={logout} className={classes.Button}>Log Out</Button>
                         </div>
                     ):(
-                        <Button component={Link} to="/auth" variant="contained">Sign In </Button>
+                        <Button component={Link} to="/auth" variant="contained" className={classes.Button}>Sign In </Button>
                     )
                 }
             </Toolbar>
-        </AppBar>
+        </div>
     )
 }
 

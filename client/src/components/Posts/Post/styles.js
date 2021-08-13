@@ -17,8 +17,9 @@ export default makeStyles({
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'space-between',
-    borderRadius: '15px',
-    height: '100%',
+    borderRadius: '20px 40px 60px 80px',
+    width:'220px',
+    height: '330px',
     position: 'relative',
   },
   overlay: {
@@ -39,14 +40,31 @@ export default makeStyles({
   details: {
     display: 'flex',
     justifyContent: 'space-between',
-    margin: '20px',
+    margin: '15px 15px 0px',
   },
   title: {
     padding: '0 16px',
+    fontSize:'17px',
+    fontWeight:'600'
   },
   cardActions: {
-    padding: '0 16px 8px 16px',
+    padding: '0 16px 8px 12px',
     display: 'flex',
     justifyContent: 'space-between',
   },
+  cardAction: {
+    display: 'block',
+    textAlign: 'initial',
+  },
+  deleteBtn:{
+    position: 'relative',
+    top:'-30px'
+  },
+  likeBtn:{
+    position: 'relative',
+    top:'-30px'
+  },
+  author:{
+    color: '#fff'
+  }
 });

@@ -3,21 +3,31 @@ import { Grid, CircularProgress } from '@material-ui/core';
 import { useSelector } from 'react-redux';
 
 import Post from './Post/Post';
+import Poste from './Post/Poste';
 import useStyles from './styles';
+import {useHistory,useLocation} from 'react-router-dom'
 
 const Posts = ({ setCurrentId }) => {
-  const posts = useSelector((state) => state.posts);
+  const {posts,isLoading} = useSelector((state) => state.posts);
   const classes = useStyles();
+  const history  = useHistory()
+
+  // console.log("les posts: ", posts)
+
+  if(!posts.length && !isLoading){
+
+    history.push('/')
+  }
 
   return (
-    !posts.length ? <CircularProgress /> : (
-      <Grid className={classes.container} container alignItems="stretch" spacing={3}>
+    isLoading ? <CircularProgress /> : (
+     <div   className={classes.container}>
         {posts.map((post) => (
-          <Grid key={post._id} item xs={12} sm={6} md={6}>
+          <div key={post._id}>
             <Post post={post} setCurrentId={setCurrentId} />
-          </Grid>
+          </div>
         ))}
-      </Grid>
+      </div>
     )
   );
 };
