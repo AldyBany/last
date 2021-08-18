@@ -16,8 +16,8 @@ export default makeStyles({
   card: {
     display: 'flex',
     flexDirection: 'column',
-    justifyContent: 'space-between',
-    borderRadius: '20px 40px 60px 80px',
+    // justifyContent: 'space-between',
+    borderRadius: '20px 20px 40px 40px',
     width:'220px',
     height: '330px',
     position: 'relative',
@@ -40,21 +40,24 @@ export default makeStyles({
   details: {
     display: 'flex',
     justifyContent: 'space-between',
-    margin: '15px 15px 0px',
+    margin: '0px',
+    textAlign:'center'
   },
   title: {
-    padding: '0 16px',
+    // padding: '0 16px',
+   fontFamily: "'Roboto', sans-serif",
     fontSize:'17px',
-    fontWeight:'600'
+    fontWeight:'600',
+    textAlign:'center'
+
   },
   cardActions: {
-    padding: '0 16px 8px 12px',
-    display: 'flex',
-    justifyContent: 'space-between',
+    // padding: '0  16px 8px 12px',
+    
   },
   cardAction: {
-    display: 'block',
-    textAlign: 'initial',
+    
+    
   },
   deleteBtn:{
     position: 'relative',

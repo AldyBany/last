@@ -95,7 +95,6 @@ const Banner = () => {
         <div className="banner">
             <div className="text-container">
                 <h1 className="h1">Write a story <br/>about your travels memories <br/> and share it with your friends<br/> and the world </h1><br/>
-                
             </div>
 
            

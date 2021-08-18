@@ -64,7 +64,7 @@ export default makeStyles((theme) => ({
     backgroundColor: deepPurple[500],
   },
   Button:{
-    background: '#f2545b',
+    background: '#6e75a8',
     color:'#fff',
     borderRadius:'40px'
   }
